@@ -4,16 +4,16 @@
         <th>Headquarters</th>
         <th>Revenue</th>
     </tr>
-    {{#each model as |company index|}}
+    {{#each model.companies as |company index|}}
     <tr >
         <td>{{company.name}}</td>
-        <td class="{{colorClass}}">{{company.headquarters}}</td>
+        <td style="background: {{color}}">{{company.headquarters}}</td>
         <td>{{company.revenue}}</td>
     </tr>
     {{/each}}
 </table>
  <button {{action "changeColor"}}>Change color</button>
-
+<hr/>
 <div>Hi Mr. {{firstName}} {{lastName}}</div><hr>
 <div> Last Name is disabled: {{nameDisabled}}<br></div>
 <hr> <br>
@@ -24,7 +24,7 @@
 <div><small>Disable last name ? </small>
        {{input type="checkbox" checked=nameDisabled}}
 </div>
-
+<hr/>
 <ul>
     <li>{{#link-to "books.index"}}
           Fetch All the Books From Server{{/link-to}} 
@@ -35,7 +35,24 @@
             Create a new book{{/link-to}}
     </li>
 </ul><br><br><br>
-
+<hr/>
+<h1>Components</h1>
+{{profile-card-static}}
 {{profile-card name="Sagar" avatar="https://randomuser.me/api/portraits/thumb/lego/1.jpg" bio="Great artist"}}
-{{profile-card name=model.name avatar=model.avatar bio=model.bio}}
+{{profile-card name=model.profile.name avatar=model.profile.avatar bio=model.profile.bio}}
+<hr/>
 
+ <p>{{my-btn action="myClick"}} </p>
+ <b>Info:</b> <span id="info"> {{title}}</span>
+ <hr/>
+
+ 
+<h4> Index view: Bubbling actions through components</h4>
+
+{{pressCount}} Button presses
+{{button-wrapper action="buttonClick"}}
+ <hr/>
+
+ <h4>Services</h4>
+ {{comp-test}}
+  <hr/>

@@ -19,14 +19,23 @@ export default Route.extend({
         //return ['Android', 'iOS', 'Tizen'];
         //return companies;
         return {
-            name: "Ravi Kumar",
-            avatar: "https://randomuser.me/api/portraits/thumb/lego/3.jpg",
-            bio: "Famous painter"
+            companies: companies,
+            profile: {
+                name: "Ravi Kumar",
+                avatar: "https://randomuser.me/api/portraits/thumb/lego/3.jpg",
+                bio: "Famous painter"
+            }
         };
     },
     redirect() {
         //window.console.log("redirect() @ routes/index.js")  ;
         //this.transitionTo("commits.index");
+    },
+    actions : {
+        myClick(title) {
+            this.set('controller.title',title);
+        }
     }
+    
 });
 console.log("in Route.") ;
