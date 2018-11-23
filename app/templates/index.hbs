@@ -1,0 +1,41 @@
+<table id="companies">
+    <tr>
+        <th>Company Name</th>
+        <th>Headquarters</th>
+        <th>Revenue</th>
+    </tr>
+    {{#each model as |company index|}}
+    <tr >
+        <td>{{company.name}}</td>
+        <td class="{{colorClass}}">{{company.headquarters}}</td>
+        <td>{{company.revenue}}</td>
+    </tr>
+    {{/each}}
+</table>
+ <button {{action "changeColor"}}>Change color</button>
+
+<div>Hi Mr. {{firstName}} {{lastName}}</div><hr>
+<div> Last Name is disabled: {{nameDisabled}}<br></div>
+<hr> <br>
+<div>First Name : {{input value=firstName size=20 }}</div>
+<div> Last Name : {{input value=lastName disabled=nameDisabled}}</div>
+<br><br>
+
+<div><small>Disable last name ? </small>
+       {{input type="checkbox" checked=nameDisabled}}
+</div>
+
+<ul>
+    <li>{{#link-to "books.index"}}
+          Fetch All the Books From Server{{/link-to}} 
+          <p style="color:red">[Note: Won't work since there's no server.]</p>
+    </li>
+
+    <li>{{#link-to "books.new"}}
+            Create a new book{{/link-to}}
+    </li>
+</ul><br><br><br>
+
+{{profile-card name="Sagar" avatar="https://randomuser.me/api/portraits/thumb/lego/1.jpg" bio="Great artist"}}
+{{profile-card name=model.name avatar=model.avatar bio=model.bio}}
+

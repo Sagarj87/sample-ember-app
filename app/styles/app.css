@@ -1,0 +1,31 @@
+table#companies {
+    width : 800px;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+table#companies tr {
+    width: 33%;
+    border: #000000 1px solid;
+    margin: 0;
+    padding: 0;
+}
+table#companies tr th {
+    background : #000000;
+    color: #fff;
+}
+table#companies .row {
+    background: grey;
+}
+
+.red {
+    background: red;
+}
+.green {
+    background: green;
+}
+.blue {
+    background: blue;
+}
+.grey {
+    background: grey;
+}
