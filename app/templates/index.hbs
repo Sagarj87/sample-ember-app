@@ -56,3 +56,20 @@
  <h4>Services</h4>
  {{comp-test}}
   <hr/>
+
+  <h3>hbs</h3>
+<div>
+  <p>appName: {{input type="text" value=appName}}</p>
+  <p>Triggers: didUpdateAttrs, didReceiveAttrs, willUpdate, willRender, 
+      didUpdate, didRender</p>
+</div>
+
+<div>
+  <p>data: {{input type="text" value=data}}</p>
+  <p>Triggers: willUpdate, willRender, didUpdate, didRender</p>
+</div>
+
+
+<hr>
+
+{{life-span name=appName data=data refresh="refresh"}}

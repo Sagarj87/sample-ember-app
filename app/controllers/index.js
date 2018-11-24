@@ -8,6 +8,8 @@ export default Controller.extend({
     counter : 0,
     color : 'green',
     pressCount: 0,
+    appName:'My Ember',
+    data: "5",
     actions:{ // trigger an event on the click.
         changeEdit(){
             window.console.log("changeEdit @ controller") ;
@@ -17,8 +19,11 @@ export default Controller.extend({
             this.set('color',  this.get('colors')[++this.counter % (this.get('colors').length)]);
         },
         buttonClick() {
-            window.console.log("buttonClick() @ contr")    ;
+            window.console.log("buttonClick() @ contr");
             this.incrementProperty('pressCount');
+        },
+        refresh(){
+            window.console.log("refresh() @ contr");
         }
     }
 });
