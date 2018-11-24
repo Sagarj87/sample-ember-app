@@ -23,6 +23,7 @@ Router.map(function() {
     this.route('book',{path: "/:id"});
     this.route('new');
   });
+  this.route('alert');
 });
 
 export default Router;

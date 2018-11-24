@@ -64,5 +64,5 @@ console.log("child's addr: " ,  ram.get('address'));
 ajay.set('address','Mysore');
 console.log("child's addr: " , ram.get('address')); */
 
-window.console.log("Created App " );
+//window.console.log("Created App " );
 export default App;
